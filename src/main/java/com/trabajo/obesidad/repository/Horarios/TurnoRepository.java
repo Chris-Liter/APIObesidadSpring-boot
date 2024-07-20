@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.trabajo.obesidad.model.UsuarioModel;
 import com.trabajo.obesidad.model.Horarios.TurnoModel;
 
 @Repository
@@ -15,6 +14,7 @@ public class TurnoRepository implements ITurnoRepository{
 
     @Autowired
     private JdbcTemplate jdbc;
+    
     @Override
     public List<TurnoModel> findAll() {
         String sql = "SELECT * FROM turnos";

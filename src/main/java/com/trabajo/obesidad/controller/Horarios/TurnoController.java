@@ -6,12 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.trabajo.obesidad.model.Horarios.TurnoModel;
+import com.trabajo.obesidad.repository.Horarios.ITurnoRepository;
 
 @Service
 public class TurnoController implements ITurnoController{
 
     @Autowired
-    private ITurnoController iCategoriaRepository;
+    private ITurnoRepository iCategoriaRepository;
 
     @Override
     public List<TurnoModel> findAll() {

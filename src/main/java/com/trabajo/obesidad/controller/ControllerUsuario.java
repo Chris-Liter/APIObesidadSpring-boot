@@ -18,7 +18,8 @@ import java.util.List;
 @RequestMapping("api/v1/usuarios")
 @CrossOrigin("*")
 public class ControllerUsuario {
-@Autowired
+    
+    @Autowired
     private IUsuarioController iCategoriaService;
 
     @GetMapping("/list")

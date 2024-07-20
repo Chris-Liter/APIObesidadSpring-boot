@@ -1,6 +1,5 @@
 package com.trabajo.obesidad.controller.Horarios;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,23 +17,23 @@ import com.trabajo.obesidad.model.ServiceResponse;
 import com.trabajo.obesidad.model.Horarios.TurnoModel;
 
 @RestController
-@RequestMapping("api/v1/usuarios")
+@RequestMapping("api/v1/turnos")
 @CrossOrigin("*")
 public class ControllerTurno {
 
     @Autowired
-    private ITurnoController iCategoriaService;
+    private ITurnoController iTurnosService;
 
     @GetMapping("/list")
     public ResponseEntity<List<TurnoModel>> list(){
-        var result = iCategoriaService.findAll();
+        var result = iTurnosService.findAll();
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @PostMapping("/save")
     public ResponseEntity<ServiceResponse> save(@RequestBody TurnoModel c){
         ServiceResponse serv = new ServiceResponse();
-        int result = iCategoriaService.save(c);
+        int result = iTurnosService.save(c);
         if(result == 1){
             serv.setMessage("Item agregado");
         }
@@ -44,7 +43,7 @@ public class ControllerTurno {
     @PostMapping("/update")
     public ResponseEntity<ServiceResponse> update(@RequestBody TurnoModel c){
         ServiceResponse serv = new ServiceResponse();
-        int result = iCategoriaService.update(c);
+        int result = iTurnosService.update(c);
         if(result == 1){
             serv.setMessage("Item actualizado");
         }
@@ -53,7 +52,7 @@ public class ControllerTurno {
     @GetMapping("/delete/{id}")
     public ResponseEntity<ServiceResponse> delete(@PathVariable int id){
         ServiceResponse serv = new ServiceResponse();
-        int result = iCategoriaService.delete(id);
+        int result = iTurnosService.delete(id);
         if(result == 1){
             serv.setMessage("Item eliminado");
         }

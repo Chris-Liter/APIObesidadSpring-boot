@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 @Table(name = "turnos")
 public class TurnoModel {
 
+    @Id
     int id;
     String fecha;
     String hora;

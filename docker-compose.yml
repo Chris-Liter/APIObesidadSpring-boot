@@ -8,7 +8,7 @@ services:
 
   java_app:
     container_name: java_app  # Usa solo si la imagen ya está construida y disponible localmente
-    image: pee-java-app:1.0.0
+    image: chrisliter/apiobesidadspringboot
     build: .
     ports:
       - 8080:8080

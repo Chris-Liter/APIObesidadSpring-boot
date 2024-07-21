@@ -13,7 +13,7 @@ services:
     ports:
       - 8080:8080
     environment:
-      - DATABASE_URL=jdbc:postgresql://35.226.185.173:5432/postgres
+      - DATABASE_URL=jdbc:postgresql://34.66.57.179:5432/postgres
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
 

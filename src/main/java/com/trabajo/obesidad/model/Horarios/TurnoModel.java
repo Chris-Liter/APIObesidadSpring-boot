@@ -20,5 +20,5 @@ public class TurnoModel {
     String hora;
     int id_usuario;
     int id_medico;
-
+    boolean estado;
 }

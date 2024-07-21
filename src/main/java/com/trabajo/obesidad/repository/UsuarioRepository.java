@@ -22,15 +22,15 @@ public class UsuarioRepository implements IObesidadRepository{
 
     @Override
     public int save(UsuarioModel usuario) {
-        String sql = "INSERT INTO usuarios(cedula, nombres, apellidos, telefono, correo, edad, altura, peso, historialfamiliar, entrecomidas, comidascaloricas)\r\n" + //
-                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        return jdbc.update(sql, usuario.getCedula(), usuario.getNombres(), usuario.getApellidos(), usuario.getTelefono(), usuario.getCorreo(), usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.isHistorialfamiliar(), usuario.getEntrecomidas(), usuario.isComidascaloricas());
+        String sql = "INSERT INTO usuarios(cedula, nombres, apellidos, telefono, correo, edad, altura, peso, historialfamiliar, entrecomidas, comidascaloricas, prediacnostico)\r\n" + //
+                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        return jdbc.update(sql, usuario.getCedula(), usuario.getNombres(), usuario.getApellidos(), usuario.getTelefono(), usuario.getCorreo(), usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.isHistorialfamiliar(), usuario.getEntrecomidas(), usuario.isComidascaloricas(), usuario.getPrediacnostico());
     }
 
     @Override
     public int update(UsuarioModel usuario) {
-        String sql = "UPDATE usuarios set cedula = ?, nombres = ?, apellidos = ?, telefono = ?, correo = ?, edad = ?, altura = ?, peso = ?, historialfamiliar =?,entrecomidas = ?, comidascaloricas = ? where id = ?";
-        return jdbc.update(sql, usuario.getCedula(), usuario.getNombres(), usuario.getApellidos(), usuario.getTelefono(), usuario.getCorreo(), usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.isHistorialfamiliar(), usuario.getEntrecomidas(), usuario.isComidascaloricas(),usuario.getId());
+        String sql = "UPDATE usuarios set cedula = ?, nombres = ?, apellidos = ?, telefono = ?, correo = ?, edad = ?, altura = ?, peso = ?, historialfamiliar =?,entrecomidas = ?, comidascaloricas = ?, prediacnostico = ? where id = ?";
+        return jdbc.update(sql, usuario.getCedula(), usuario.getNombres(), usuario.getApellidos(), usuario.getTelefono(), usuario.getCorreo(), usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.isHistorialfamiliar(), usuario.getEntrecomidas(), usuario.isComidascaloricas(), usuario.getPrediacnostico(),usuario.getId());
     }
 
     @Override

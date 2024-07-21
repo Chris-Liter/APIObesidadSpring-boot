@@ -1,5 +1,8 @@
 package com.trabajo.obesidad.model.Horarios;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
@@ -16,8 +19,8 @@ public class TurnoModel {
 
     @Id
     int id;
-    String fecha;
-    String hora;
+    LocalDate fecha;
+    LocalTime hora;
     int id_usuario;
     int id_medico;
     boolean estado;

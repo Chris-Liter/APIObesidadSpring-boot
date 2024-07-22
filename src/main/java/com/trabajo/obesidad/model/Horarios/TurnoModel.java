@@ -21,7 +21,7 @@ public class TurnoModel {
     int id;
     LocalDate fecha;
     LocalTime hora;
-    int id_usuario;
+    String cedula;
     int id_medico;
     boolean estado;
 }

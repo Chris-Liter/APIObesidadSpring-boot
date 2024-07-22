@@ -23,15 +23,15 @@ public class TurnoRepository implements ITurnoRepository{
 
     @Override
     public int save(TurnoModel usuario) {
-        String sql = "INSERT INTO turnos(fecha, hora, id_usuario, id_medico, estado)\r\n" + //
+        String sql = "INSERT INTO turnos(fecha, hora, cedula, id_medico, estado)\r\n" + //
                         "VALUES (?, ?, ?, ?, ?)";
-        return jdbc.update(sql, usuario.getFecha(), usuario.getHora(), usuario.getId_usuario(), usuario.getId_medico(), usuario.isEstado());
+        return jdbc.update(sql, usuario.getFecha(), usuario.getHora(), usuario.getCedula(), usuario.getId_medico(), usuario.isEstado());
     }
 
     @Override
     public int update(TurnoModel usuario) {
-        String sql = "UPDATE turnos set fecha = ?, hora = ?, id_usuario = ?, id_medico = ?, estado = ? where id = ?";
-        return jdbc.update(sql, usuario.getFecha(), usuario.getHora(), usuario.getId_usuario(), usuario.getId_medico(), usuario.isEstado(), usuario.getId());
+        String sql = "UPDATE turnos set fecha = ?, hora = ?, cedula = ?, id_medico = ?, estado = ? where id = ?";
+        return jdbc.update(sql, usuario.getFecha(), usuario.getHora(), usuario.getCedula(), usuario.getId_medico(), usuario.isEstado(), usuario.getId());
     }
 
     @Override

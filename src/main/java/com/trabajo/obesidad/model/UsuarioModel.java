@@ -28,4 +28,5 @@ public class UsuarioModel {
 	String entrecomidas;
 	boolean comidascaloricas;
 	String prediacnostico;
+	String recomendacion;
 }

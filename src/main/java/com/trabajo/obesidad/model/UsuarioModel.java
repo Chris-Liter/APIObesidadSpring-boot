@@ -27,6 +27,6 @@ public class UsuarioModel {
 	boolean historialfamiliar;
 	String entrecomidas;
 	boolean comidascaloricas;
-	String prediacnostico;
+	String prediagnostico;
 	String recomendacion;
 }

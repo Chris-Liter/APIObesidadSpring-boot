@@ -25,3 +25,4 @@ public class TurnoModel {
     int id_medico;
     boolean estado;
 }
+
